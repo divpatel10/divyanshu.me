@@ -14,25 +14,22 @@ function openWindow(url) {
 
 function ProjectCard({ img, title, link, description }) {
   return (
-    <div class="anim-slide-up inline-block items-center justify-center min-w-[30%] px-4 py-2"
+    <div className="inline-block cursor-pointer group"
       onClick={e => {
         e.preventDefault();
         openWindow(link);
-      }
-      }
-
+      }}
     >
-      <div class="overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
+      <div className="overflow-hidden transition-opacity duration-200 hover:opacity-70">
         <div>
-          <img class="object-fill h-28 w-48 border-blue-500 border-2" src={img} alt="" />
+          <img className="object-cover h-24 w-32 border border-gray-700" src={img} alt={title} />
         </div>
-        <div class="py-2 px-2 bg-gradient-to-br from-blue-400 to-blue-600 w-48">
-          <h3 class="text-sm mb-2 font-bold w-auto text-white">{title}</h3>
-          <p class="text-sm">{description}</p>
+        <div className="py-1.5 px-2 bg-gray-900 border border-t-0 border-gray-700 w-32">
+          <h3 className="text-xs font-medium text-white mb-1 leading-tight">{title}</h3>
+          <p className="text-[10px] text-gray-500 leading-tight line-clamp-2">{description}</p>
         </div>
       </div>
     </div>
-
   );
 }
 
