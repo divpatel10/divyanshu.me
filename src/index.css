@@ -12,6 +12,11 @@ body {
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 @keyframes fadeInUp {
@@ -279,10 +284,22 @@ body {
 
 /* Glass Border Effect */
 .component-glass-border {
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 12px;
   border: 1px solid transparent;
   transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .component-glass-border {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .component-glass-border {
+    padding: 1.5rem;
+  }
 }
 
 .component-glass-border:hover {

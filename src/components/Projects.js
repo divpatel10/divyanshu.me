@@ -14,11 +14,11 @@ function Projects() {
     const PROJECT_LIGHTCRAWL = "https://github.com/divpatel10/lightcrawl"
     return (
         <div className="text-center text-white component-glass-border">
-            <p className='text-lg text-gray-200 uppercase tracking-wider mb-10 font-medium'>
+            <p className='text-base sm:text-lg text-gray-200 uppercase tracking-wider mb-6 sm:mb-8 md:mb-10 font-medium'>
                 Projects
             </p>
 
-            <div className='flex flex-wrap justify-center gap-4'>
+            <div className='flex flex-wrap justify-center gap-3 sm:gap-4'>
                 <Tags title="Cosmos Capsule API" onclick={PROJECT_COSMOS} icon={<FaRocket className="inline-block text-base text-cyan-400" />} />
                 <Tags title="The Secondary Frontier" onclick={PROJECT_SF} icon={<FaChartLine className="inline-block text-base text-purple-400" />} />
                 <Tags title="LightCrawl" onclick={PROJECT_LIGHTCRAWL} icon={<FaSpider className="inline-block text-base text-green-400" />} />
